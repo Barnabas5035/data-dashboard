@@ -44,18 +44,6 @@ function Navebar() {
                   </Link>
                 </a>
               </li>
-
-              <li className='nav-item'>
-                <a className='nav-link text-black' href='$'>
-                  <Link
-                    to={'/searchpage'}
-                    style={{ textDecoration: 'none' }}
-                    className='text-black'
-                  >
-                    searchpage
-                  </Link>
-                </a>
-              </li>
             </ul>
             <form className='d-flex' role='search'>
               <input

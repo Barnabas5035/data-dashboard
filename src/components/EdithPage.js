@@ -14,21 +14,20 @@ const EdithPage = () => {
   const params = useParams()
   const navigate = useNavigate()
   useEffect(() => {
+    const SingleFetch = () => {
+      axios
+        .get(`http://127.0.0.1:8000/api/single_user/${params.id}`)
+        .then((res) => {
+          setEdithData(res.data)
+
+          setDescription(res.data.description)
+          setEmail(res.data.email)
+          setName(res.data.name)
+          setFile(res.data.file_name)
+        })
+    }
     SingleFetch()
-  }, [])
-
-  const SingleFetch = () => {
-    axios
-      .get(`http://127.0.0.1:8000/api/single_user/${params.id}`)
-      .then((res) => {
-        setEdithData(res.data)
-
-        setDescription(res.data.description)
-        setEmail(res.data.email)
-        setName(res.data.name)
-        setFile(res.data.file_name)
-      })
-  }
+  }, [params.id])
 
   let handleSubmit = (e) => {
     e.preventDefault()

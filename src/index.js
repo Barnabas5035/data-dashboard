@@ -4,7 +4,6 @@ import './index.css'
 import App from './App'
 import AddPage from './components/AddPage'
 import EdithPage from './components/EdithPage'
-import SearchPage from './components/SearchPage'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -22,10 +21,6 @@ const router = createBrowserRouter([
   {
     path: '/edithpage/:id',
     element: <EdithPage />,
-  },
-  {
-    path: '/searchpage',
-    element: <SearchPage />,
   },
 ])
 
