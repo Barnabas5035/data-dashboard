@@ -10,18 +10,18 @@ const SearchPage = () => {
   const [data, setData] = useState([])
   const [value, setvalue] = useState('')
 
-  const LoaduserData = () => {
-    axios
-      .get(`http://127.0.0.1:8000/api/show/user`)
-      .then((response) => {
-        setData(response.data)
-        console.log(response)
-      })
-      .catch((err) => console.log(err))
-  }
-  useEffect(() => {
-    LoaduserData()
-  }, [])
+  // const LoaduserData = () => {
+  //   axios
+  //     .get(`http://127.0.0.1:8000/api/show/user`)
+  //     .then((response) => {
+  //       setData(response.data)
+  //       console.log(response)
+  //     })
+  //     .catch((err) => console.log(err))
+  // }
+  // useEffect(() => {
+  //   LoaduserData()
+  // }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -74,7 +74,7 @@ const SearchPage = () => {
             {data.map((user) => {
               return (
                 <tr key={user.id}>
-                  <th scope='row'>{data.id}</th>
+                  <th scope='row'>{user.id}</th>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.description}</td>
