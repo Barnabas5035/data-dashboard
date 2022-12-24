@@ -6,6 +6,7 @@ import AddPage from './components/AddPage'
 import EdithPage from './components/EdithPage'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import SearchPage from './components/SearchPage'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: '/edithpage/:id',
     element: <EdithPage />,
+  },
+  {
+    path: '/searchPage',
+    element: <SearchPage />,
   },
 ])
 

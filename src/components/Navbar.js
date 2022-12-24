@@ -6,9 +6,7 @@ function Navebar() {
     <div>
       <nav className='navbar navbar-expand-lg bg-info'>
         <div className='container-fluid'>
-          <a className='navbar-brand' href='$'>
-            Navbar
-          </a>
+          <div className='navbar-brand'>Navbar</div>
           <button
             className='navbar-toggler'
             type='button'
@@ -41,6 +39,17 @@ function Navebar() {
                     className='text-black'
                   >
                     Add User
+                  </Link>
+                </a>
+              </li>
+              <li className='nav-item'>
+                <a className='nav-link ' href='$'>
+                  <Link
+                    to={'/searchPage'}
+                    style={{ textDecoration: 'none' }}
+                    className='text-black'
+                  >
+                    searchPage
                   </Link>
                 </a>
               </li>
